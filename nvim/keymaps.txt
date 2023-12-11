@@ -110,10 +110,6 @@ N                             - previous occurrence of search pattern
 
     > x           - delete without copy
 
-    > <leader>+   - increment
-
-    > <leader>-   - decrement
-
     > <leader>sv  - split window vertically
 
     > <leader>sh  - split window horizontally

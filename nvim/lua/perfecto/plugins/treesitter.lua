@@ -1,4 +1,4 @@
-require("nvim-treesitter.install").prefer_git = false
+require("nvim-treesitter.install").prefer_git = true
 require("nvim-treesitter.install").compilers = { "gcc" }
 
 -- import nvim-treesitter plugin safely
@@ -19,15 +19,8 @@ treesitter.setup({
 	autotag = { enable = true },
 	-- ensure these language parsers are installed
 	ensure_installed = {
-		"css",
 		"lua",
 		"vim",
-		"c",
-		"cpp",
-		"java",
-		"javascript",
-		"python",
-		"html",
 		"markdown",
 		"markdown_inline",
 	},

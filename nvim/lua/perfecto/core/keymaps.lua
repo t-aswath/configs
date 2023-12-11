@@ -4,15 +4,15 @@ local keymap = vim.keymap -- for conciseness
 
 --genaral keyymaps
 
-keymap.set("i", "nn", "<ESC>") -- i -> n
+-- keymap.set("i", "", "<ESC>") -- i -> n
 
 keymap.set("n", "<leader>c", ":nohl<CR>") --cls search
 
-keymap.set("n", "x", '"_x') --delete without copy
+-- keymap.set("n", "x", '"_x') --delete without copy
 
-keymap.set("n", "<leader>+", "<C-a>") --increment
+-- keymap.set("n", "<leader>+", "<C-a>") --increment
 
-keymap.set("n", "<leader>-", "<C-x>") --decrement
+-- keymap.set("n", "<leader>-", "<C-x>") --decrement
 
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally

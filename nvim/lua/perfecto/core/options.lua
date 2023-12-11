@@ -37,3 +37,4 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
+vim.notify = require("notify")

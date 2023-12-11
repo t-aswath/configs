@@ -31,12 +31,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- use("rebelot/kanagawa.nvim")
-
-	use("ellisonleao/gruvbox.nvim")
-
-	-- use("morhetz/gruvbox")
-	-- use("sainnhe/gruvbox-material")
-
+	use("catppuccin/nvim")
 	-- discord
 	use("andweeb/presence.nvim")
 
@@ -111,13 +106,25 @@ return packer.startup(function(use)
 
 	use("ThePrimeagen/harpoon") -- harpoon
 
+	use("ThePrimeagen/vim-be-good")
+
+	use("rcarriga/nvim-notify")
+
+	use({ "michaelb/sniprun", run = "sh ./install.sh" })
+
 	-- alpha
 	use({
 		"goolord/alpha-nvim",
-		config = function()
-			require("alpha").setup(require("alpha.themes.dashboard").config)
-		end,
 	})
+
+	-- use({
+	-- 	"jackMort/ChatGPT.nvim",
+	-- 	requires = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 	},
+	-- })
 
 	-- weather
 	use("bitspaceorg/weather-reporto.nvim")
