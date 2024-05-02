@@ -30,8 +30,8 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	-- use("rebelot/kanagawa.nvim")
 	use("catppuccin/nvim")
+
 	-- discord
 	use("andweeb/presence.nvim")
 
@@ -48,9 +48,9 @@ return packer.startup(function(use)
 
 	use("nvim-tree/nvim-tree.lua")
 
-	use("nvim-tree/nvim-web-devicons") -- vs-code like icons
+	-- use("mbbill/undotree")
 
-	use("nvim-lualine/lualine.nvim") -- lualine
+	use("nvim-tree/nvim-web-devicons") -- vs-code like icons
 
 	use("lukas-reineke/indent-blankline.nvim")
 
@@ -76,6 +76,7 @@ return packer.startup(function(use)
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+	use("WhoIsSethDaniel/mason-tool-installer.nvim")
 
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
@@ -85,17 +86,20 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	-- formatting & linting
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	use("stevearc/conform.nvim")
+	use("mfussenegger/nvim-lint")
 
 	-- treesitter configuration
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = function()
-			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-			ts_update()
-		end,
+		-- run = function()
+		-- 	local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+		-- 	ts_update()
+		-- end,
 	})
+
+	-- rust
+	use("simrat39/rust-tools.nvim")
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
@@ -106,28 +110,13 @@ return packer.startup(function(use)
 
 	use("ThePrimeagen/harpoon") -- harpoon
 
-	use("ThePrimeagen/vim-be-good")
+	-- use("ThePrimeagen/vim-be-good")
 
-	use("rcarriga/nvim-notify")
+	-- use("karb94/neoscroll.nvim")
 
-	use({ "michaelb/sniprun", run = "sh ./install.sh" })
+	use("github/copilot.vim")
 
-	-- alpha
-	use({
-		"goolord/alpha-nvim",
-	})
-
-	-- use({
-	-- 	"jackMort/ChatGPT.nvim",
-	-- 	requires = {
-	-- 		"MunifTanjim/nui.nvim",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"nvim-telescope/telescope.nvim",
-	-- 	},
-	-- })
-
-	-- weather
-	use("bitspaceorg/weather-reporto.nvim")
+	-- use({ "michaelb/sniprun", run = "sh ./install.sh" })
 
 	if packer_bootstrap then
 		require("packer").sync()

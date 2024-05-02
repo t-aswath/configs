@@ -41,3 +41,5 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 keymap.set("n", "tt", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "C", ":ColorizerToggle<CR>")
+
+keymap.set("n", "ut", ":UndotreeToggle<CR>")

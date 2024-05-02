@@ -37,7 +37,6 @@ local on_attach = function(client, bufnr)
 end
 
 -- Change the Diagnostic symbols in the sign column (gutter)
--- (not in youtube nvim video)
 local signs = { Error = " ", Warn = " ", Hint = "", Info = " " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
@@ -93,16 +92,16 @@ lspconfig["pylsp"].setup({
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	cmd = {
+		"clangd",
+		"--offset-encoding=utf-16",
+	},
 })
 lspconfig["tsserver"].setup({
 	capabilities = capabilities,
-	-- on_attach = on_attach,
-})
-lspconfig["tailwindcss"].setup({
-	capabilities = capabilities,
 	on_attach = on_attach,
 })
-lspconfig["asm_lsp"].setup({
+lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
